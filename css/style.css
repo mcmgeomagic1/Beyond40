@@ -1,0 +1,254 @@
+
+/*==========Important Settings============*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 1015px;
+  margin: 0 auto;
+}
+
+.flexLayout {
+  display: flex;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+
+section {
+  padding: 50px 0;
+}
+
+/*=========== Headling & paragraphy ===========*/
+
+h1 {
+  font-size: 150%;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+p {
+  opacity: 0.7;
+  margin-top: .5em;
+}
+/*=========Reviews========*/
+
+.reviewsSection .flexLayout {
+  grid-gap: 5em;
+  justify-content: space-between;
+}
+.reviewsSection .reviewsSection__heading {
+  text-align: center;
+}
+
+.average-rating__circlue {
+  border:  5px solid #0ed145  ;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  box-shadow: 0px 3px 10px rgba(14, 209, 69, 0.63)
+}
+
+.average-rating__main-value{
+  font-weight: bold;
+  font-size: 232%;
+}
+
+.average-rating__stars {
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  color:  #FFAB41;
+}
+
+.stars__single {
+  margin-right: .5em;
+}
+
+.breakdown-rating__row{
+  display: flex;
+  grid-gap: 1;
+  margin-bottom: .7em;
+}
+
+.breakdown-rating__row span {
+  margin-left: .7em;
+}
+
+.breakdown-rating__progress-bar {
+  max-width: 230px;
+  width: 230px;
+  background-color: #f5f8ff;
+  padding: 0px;
+  margin: 0 10px 0 20px;
+}
+
+.progress-bar__data {
+  width: 100%;
+  height: 22px;
+  padding: 2px;
+  appearance: none;
+  border: none;
+  z-index: 1;
+}
+
+.progress-bar__data::-webkit-progress-bar {
+  background-color: whiteSmoke;
+  border-radius: 10px;
+}
+
+.progress-bar__data::-webkit-progress-value {
+  filter: drop-shadow(0px 4px 5px rgba(255, 204, 72, 0.53));
+  background: #FFAB41;
+  appearance: progress-bar;
+}
+
+.breakdown-rating__row .average-rating__stars {
+  color:  #000;
+  font-size: 90%;
+}
+
+.reviewsSection__button--div {
+  display: flex;
+  flex-direction: column;
+}
+
+.button--div__btn {
+  border: 1px solid #000;
+  background-color: transparent;
+  padding: 5px 2em;
+  margin-bottom: 1em;
+  box-shadow: 4px 3px 7px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.button--div__btn:hover {
+  box-shadow: none;
+}
+
+.button--div__btn i {
+  margin-right:  .5em;
+  font-size: 80%;
+}
+
+
+/*********RESPONIVE**********/
+
+@media only screen and (min-width: 1072px) {
+  .row {
+    width: 900px;
+  }
+  .breakdown-rating__progress-bar {
+    max-width: 170px;
+    width: 170px;
+  }
+  .reviewsSection .flexLayout {
+    grid-gap: 2em;
+    justify-content: space-between;
+  }
+  .reviewsSection__breakdown-rating .stars__single {
+    margin-right: .2em;
+  }
+}
+
+@media only screen and (max-width: 1224px) {
+  .row {
+    width: 880px;
+  }
+  .breakdown-rating__progress-bar {
+    max-width: 170px;
+    width: 170px;
+  }
+  .reviewsSection .flexLayout {
+    grid-gap: 2em;
+  }
+  .reviewsSection__breakdown-rating .stars__single {
+    margin-right: .2em;
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  .row {
+    width: 730px;  
+  }
+  .breakdown-rating__progress-bar {
+    max-width: 140px;
+    width: 140px;
+  }
+  .reviewsSection .flexLayout {
+    grid-gap: 1em;
+  }
+  .reviewsSection__breakdown-rating .stars__single {
+    margin-right: .2em;
+  }
+}
+
+@media only screen and (max-width: 676px) {
+  .row {
+    width: 440px;  
+  }
+
+  .reviewsSection__average-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .breakdown-rating__row{
+    width: 78%;
+    margin:  .4em auto;
+  }
+
+  .breakdown-rating__progress-bar {
+    max-width: 160px;
+    width: 160px;
+  }
+  .reviewsSection .flexLayout {
+    grid-gap: 3em;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .button--div__btn {
+    margin: .5em auto;
+    width: 345px;   
+  }
+
+  p {
+    margin-top: .3em;
+  }
+}
+
+@media only screen and (max-width: 477px) {
+  .row {
+    width: 320px;  
+  }
+
+  .breakdown-rating__row{
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .breakdown-rating__progress-bar {
+    max-width: 130px;
+    width: 130px;
+  }
+  .button--div__btn {
+    width: 320px;   
+  }
+}
